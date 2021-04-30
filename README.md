@@ -22,13 +22,14 @@ echo repo2/ >> .git/info/sparse-checkout
 git push
 
 mkdir test_multirepo && cd test_multirepo/
+
+
+git clone \\n  --depth 1 \\n  --filter=blob:none \\n  --no-checkout \\n  https://github.com/testorgmultirepo/multirepo.git \\n;
+
+cd multirepo
+
+git checkout main -- repo1 // pull only repo1
 ```
-
-`git clone \\n  --depth 1 \\n  --filter=blob:none \\n  --no-checkout \\n  https://github.com/testorgmultirepo/multirepo.git \\n;`
-
-`cd multirepo`
-
-`git checkout main -- repo1` // pull only repo1
 
 **WE GET THE HISTORY ONLY FOR REPO1:**
 
