@@ -1,13 +1,15 @@
 # multirepo
-test if multirepo works
 
 
+```javascript
 git clone https://github.com/testorgmultirepo/multirepo.git multirepo
 cd multirepo
 git remote add origin https://github.com/testorgmultirepo/multirepo.git
 git branch -M main
 git push -u origin main
+```
 
+```javascript
 mkdir repo1 && mkdir repo2
 git push
 
@@ -18,34 +20,38 @@ echo repo2/ >> .git/info/sparse-checkout
 git push
 
 mkdir test_multirepo && cd test_multirepo/
+```
 
-git clone \\n  --depth 1 \\n  --filter=blob:none \\n  --no-checkout \\n  https://github.com/testorgmultirepo/multirepo.git \\n;
-cd multirepo
-git checkout main -- repo1 // pull only repo1
+`git clone \\n  --depth 1 \\n  --filter=blob:none \\n  --no-checkout \\n  https://github.com/testorgmultirepo/multirepo.git \\n;`
 
-we get the history only for repo1:
-commit 4d31ed0b1734f24cdb6f529176f00f5efba72a85 (grafted, HEAD -> main, origin/main, origin/HEAD)
-Author: pulpiks <pulpiks@yandex.ru>
-Date:   Fri Apr 30 15:41:06 2021 +0200
+`cd multirepo`
 
-    sdfdsf
+`git checkout main -- repo1` // pull only repo1
+
+**WE GET THE HISTORY ONLY FOR REPO1:**
+
+COMMIT 4D31ED0B1734F24CDB6F529176F00F5EFBA72A85 (GRAFTED, HEAD -> MAIN, ORIGIN/MAIN, ORIGIN/HEAD)
+AUTHOR: PULPIKS <PULPIKS@YANDEX.RU>
+DATE:   FRI APR 30 15:41:06 2021 +0200
+
+SDFDSF
 (END)
 
-The full history of commits in Github:
+**Full History Of Commits in the multirepo In Github:**
 
-sdfdsf --->>> only this commit will be picked up in the history while pulling repo1
+SDFDSF --->>> ONLY THIS COMMIT WILL BE PICKED UP IN THE HISTORY WHILE PULLING REPO1
 
-@pulpiks
-pulpiks committed 15 minutes ago
+@PULPIKS
+PULPIKS COMMITTED 15 MINUTES AGO
  
-sdfdf
+SDFDF
 
-@pulpiks
-pulpiks committed 38 minutes ago
+@PULPIKS
+PULPIKS COMMITTED 38 MINUTES AGO
  
-wip
+WIP
 
-@pulpiks
-pulpiks committed 1 hour ago
+@PULPIKS
+PULPIKS COMMITTED 1 HOUR AGO
  
 
