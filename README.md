@@ -1,6 +1,6 @@
-# multirepo
+# multirepo/monorepo
 
-git version 2.31.1
+git version 2.31.1(Please check your Git version. It should be > 2.20(Q2 2020)
 
 
 ```javascript
